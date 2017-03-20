@@ -1,0 +1,48 @@
+{% extends 'main_page/header.html' %}
+{% block content %}
+{% load staticfiles %}
+<h3>Domain Analysis</3>
+<h4><u>Five Bcl-2 homology domains (BH1–BH4 and transmembrane region)</u></h4>
+<div>
+    <img src="{% static 'img/Bcl-2-homology-domains.png' %}">
+    <p><a href='https://www.ncbi.nlm.nih.gov/pubmed/21195116' target='_blank'>(Dana Westphal, 2010)</a></p>
+    <img src="{% static 'img/BAK-domains-2.png' %}">
+    <p>BAK contains 4 Bcl-2 homology domains, including BH1, BH2, BH3 and BH4 (not shown in the diagram).</p>
+</div>
+<h4><u>Domains in Bak protein </u></h4>
+<div>
+    <ol>
+        <li>
+           <p>BH1 (117 to 136 amino acid positions)</p>
+           <p>BH1 and BH2 domains are necessary for apoptosis inhibition, allowing formation of heterodimers with Bax or Bcl-2. <a href='https://www.ncbi.nlm.nih.gov/labs/articles/8183370/' target='_blank'>(Yin, Oltvai and Korsmeyer, 1994)</a>
+           </p>
+        </li>
+        <li>
+           <p>BH2 (in 169-184 positions)</p>
+           <p>Sequences of BH1 and BH2 regulatory homology domains are conserved among anti and pro-apoptotic members of the Bcl-2 proteins. The homologies are first realized when Bcl-2 is folded into 8 alpha helices, processing all 4 homology domains, including BH4, BH3, BH1 and BH2. <a href='https://www.ncbi.nlm.nih.gov/pubmed/15949801' target='_blank'>(Gurudutta GU1, 2005)</a>
+           </p>
+           <p>BH2 The active sites in the conserved domains in the BH1 (glycine, arginine) and BH2 (tryptophan) domains are important as enzymes active site or being a binding regions for a small molecule or a molecule
+           </p>
+        </li>
+        <li>
+           <p>BH3 (74 to 88 positions)</p>
+           <p>BH3 domain is hydrophobic and contains residues required for the pro-apoptotic activity induced by homodimerization, heterodimerization with Bcl-2 and Bcl XL and the initiation of apoptosis. <a href='http://www.jbc.org/content/274/29/20415.short' target='_blank'>(Miki Hirotani, 1999)</a>
+           </p>
+           <p>Binding of the Bak protein relies mostly in the hydrophobic surface groove of the protein.
+           </p>
+        </li>
+        <li>
+           <p>BH4</p>
+           <p>The BH4 domain has an important function in anti-apoptotic function, suppressing cell death. <a href='http://www.jbc.org/content/274/29/20415.short' target='_blank'>(Miki Hirotani, 1999)</a>
+           </p>
+        </li>
+        <li>
+           <p>Transmembrane domain</p>
+           <p>Transmembrane domains (TMDs) have important functions in protein-protein interactions and in interactions between Bax (Bcl-2 associated X, apoptosis regulator) and prosurvival proeins in the membrane.
+           </p>
+           <p>These pro-survival functions of TMDs are promotes specially by homooligomerization and heterooligomerization in bacterial and mitochondrial membranes. <a href='http://www.pnas.org/content/114/2/310.full' target='_blank'>(Vicente Andreu-Fernández, 2016)</a>
+           </p>
+        </li>
+    </ol>
+</div>
+{% endblock %}

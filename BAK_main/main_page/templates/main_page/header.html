@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CELL2008</title>
+	<meta charset="utf-8" />
+    {% load staticfiles %}
+    <link rel = 'stylesheet' href="{%  static '/css/bootstrap.min.css' %}" type= 'text/css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src = "{% static '/js/bootstrap.min.js' %}"></script>
+    <script src = '{% static "/js/JSmol.min.js" %}'></script>
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <style type="text/css">
+		html,
+		body {
+		  height:100%;
+		}
+        p {
+            font-size: 110%;
+            line-height: 2;
+            padding-bottom: 20px
+        }
+        li {
+            font-size: 110%;
+            padding-bottom:2%
+        }
+        #tail {
+            font-size: 100%;
+            line-height: 1.5;
+        }
+        .thecakewalk{
+            background-color:#3E5BA9;
+        }
+        .nav-pills > li.active > a {
+            background-color:#3E5BA9;
+            font-weight: bold;
+        }
+        hr { 
+            display: block;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+        .circle{
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: #ffffff;
+        }
+        th{
+            text-align: center;
+            padding:2.5%;
+        }
+        img{
+            margin-bottom:2.5%;
+        }
+        table{
+            padding:2.5%
+        }
+	</style>
+   <!-- <script>
+        var windowSizeWidth = $(window).width();
+    if(windowSizeWidth< 992){
+        $('#sidebar_main').removeClass('affix');
+        console.log('yes');
+    }else{
+    console.log('no');
+    }
+    </script>-->
+    
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+    <div class = 'jumbotron jumbotron-fluid thecakewalk' >
+        <div class = 'container' z-index = 2 >
+            <h1 style="color:#fff">BAK protein</h1>
+        </div>
+    </div>
+    
+	<div class="container" style="min-height:95%; ">
+
+		<div class="row">
+         <div class="col-xs-10" role='main'>
+		  
+			<div class='container-fluid'>
+			<br><br>
+			   {% block content %}
+			   {% endblock %}	
+			</div>
+		  </div>
+		  <div class="col-xs-2">
+		   <!-- Great, til you resize. -->
+			<div class="col-md-3 sidebar-toggle" id="sidebar" role = 'complementary'>
+            <nav class= 'bs-docs-sidebar affix' id='sidebar_main'>
+			  <ul class="nav nav-pills nav-stacked">
+				<li id='main_page'><a href='/'>Introduction</a></li>
+				<li id='domain_analysis'><a href='/domain_analysis/'>Domain Analysis</a></li>
+				<li id='sequence_alignment'><a href='/sequence_alignment/'>Sequence Alignment</a></li>
+                <li id= 'structural_models'><a href='/structural_models/'>Structural Models</a></li>
+                <!--<li id= 'similar_proteins'><a href='/similar_proteins/'>Similar Proteins</a></li>-->
+				<li id='conclusion'><a href='/conclusion/'>Conclusion</a></li>
+				<li id='references'><a href='/references/'>References</a></li>
+			  </ul>
+              </nav>
+			</div> <!--well bs-sidebar affix-->           
+		  </div> <!--col-sm-2-->
+		 
+		</div> 
+	</div>
+    <footer>
+		<div class="container" >
+        <hr>
+			<p id = 'tail'>Members: Dominque Harris | Maximillian Biguet | Yi Nian Lee | Olivia Rogerson | Eloise Nee | Jessica Yu</br>
+            Contact: <a href = 'mailto:yi.lee.15@ucl.ac.uk'>yi.lee.15@ucl.ac.uk</a></p>
+
+		</div>
+	</footer>	
+    <script>
+    var urlLocation = window.location.href;
+    var extract = /\/(\w+\_?\w+)\/$/.exec(urlLocation);
+    if (extract == null){
+        $('#main_page').addClass('active');
+
+    }else{
+        $('#' + extract[1]).addClass('active');
+    }
+
+    </script>
+    
+</body>
+
+</html>

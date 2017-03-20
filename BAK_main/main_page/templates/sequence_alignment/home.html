@@ -1,0 +1,141 @@
+{% extends 'main_page/header.html' %}
+{% block content %}
+{% load staticfiles %}
+<div class ='container'>
+<div class = 'row'>
+<div class ='col-xs-10'>
+<h3>Multiple Sequence Alignment</h3>
+<p>A Multiple Sequence Alignment (MSA) can show the relationship between three or more protein or DNA/RNA sequences of a similar length.
+</p>
+<p>Two different MSA tools: <a href='http://www.ebi.ac.uk/Tools/msa/clustalo/'>Clustal Omega</a> and <a href='http://multalin.toulouse.inra.fr/multalin/'>MultAlin</a>
+</p>
+<h4><u>Clustal Omega Multiple Sequence Alignment</u></h4>
+<table>
+    <tr style='background-color: grey'>
+        <th> Sequence<br> H-Homo Sapiens</th>
+        <th>Symbol</th>
+        <th>Sequence homology to Bak sequence<br>High sequence homology in the 1-121 region
+        </th>
+    </tr>
+    <tr>
+        <th>Bak protein [Homo sapiens]</th>
+        <th>BakPH</th>
+        <th>100%</th>
+    </tr>
+    <tr>
+        <th>Bak-2-protein [Homo sapiens]</th>
+        <th>Bak-2PH</th>
+        <th>80-90%</th>
+    </tr>
+    <tr>
+        <th>Bcl-2 homologous antagonist/killer</th>
+        <th>BCLAntagH</th>
+        <th>25%</th>
+    </tr>
+</table>
+<h4><u>Bak-2 proteins (Homo sapiens)</u></h4>
+<img src="{% static 'img/BAK_index_00.png' %}">
+<p>BH3-only Proteins are the essential Initiators of apoptosis.</p>
+<p>Over the full sequence, Bak is 25, 33 and 19% identical to Bcl-2, Bcl-xL and Bax, respectively. <a href='http://atlasgeneticsoncology.org/Genes/BAK1ID752ch6p21.html ' target='_blank'>(Atlasgeneticsoncology.org, 2017)</a>. Below are the multiple sequence alignment for BAK protein, Bal-2 protein and the Bcl-2 homologous antagonist in homo sapiens, where conserved domains are highlighted.
+</p>
+<img src="{% static 'img/BAK_index_01.png' %}">
+<img src="{% static 'img/BAK_index_02.png' %}">
+<p>Apoptosis regulator proteins of the Bcl-2 family, named after B-cell lymphoma 2 in different organisms, as summaried in the table below, highlighting the conserved BH3 hydrophobic groove domain.
+</p>
+<table>
+    <tr style='background-color: grey'>
+        <td>Organism</td>
+        <td>Amino Acid Length</td>
+        <td>Symbol</td>
+        <th>Homology</th>
+    </tr>
+    <tr>
+        <td>Schmidtea mediterranea</td>
+        <td>213 aa</td>
+        <td>Zebrafish</td>
+        <th rowspan='2'>SH3 binding</th>
+    </tr>
+    <tr>
+        <td>Hydra vulgaris</td>
+        <td>220 aa</td>
+        <td>Fresh-water polyp (bcl-2)</td>
+    </tr>
+    <tr>
+        <td>Xenpus laevis</td>
+        <td>225 aa</td>
+        <td>Frogs (BCL2AntagFrogs)</td>
+    </tr>
+    <tr>
+        <td>Mus musculus</td>
+        <td>208 aa</td>
+        <td>Mouse (BakPMouse)</td>
+    </tr>
+    <tr>
+        <td>Rattus norvegicus</td>
+        <td>209 aa</td>
+        <td>Rats (BakPRats)</td>
+    </tr>
+</table>
+<br>
+<img src="{% static 'img/BAK_index_03.png' %}">
+<p>Conserved hydrophobic residues - SH3 domains</p>
+<p> MultAlin version 5.4.1
+    </br>Consensus levels: high=90% low=50%
+    </br>Consensus symbols:
+    </br>! is anyone of IV
+    </br>$ is anyone of LM
+    </br>% is anyone of FY
+    </br># is anyone of NDQEBZ
+</p>
+<img src="{% static 'img/BAK_index_04.png' %}" style='height:85%; width:85%'>
+<br>
+<h4><u>Three closely-related BAK genes are analysed for the consequence sequences as shown below, highlighting the conserved BH3 hydrophobic groove domain
+</u></h4>
+<table>
+    <tr style='background-color:grey'>
+        <th>Proteins</th>
+        <th>Organism</th>
+        <th>Amino Acid Length</th>
+        <th>Homology Domains</th>
+    </tr>
+    <tr>
+        <th>Bak1</th>
+        <th>Schmidtea mediterranea </th>
+        <th>213</th>
+        <th>SH3</th>
+    </tr>
+    <tr>
+        <th>Bak2</th>
+        <th>Schmidtea mediterranea </th>
+        <th>215</th>
+        <th>SH3</th>
+    </tr>
+    <tr>
+        <th>Bak3</th>
+        <th>Schmidtea mediterranea </th>
+        <th>170</th>
+        <th>SH3 processed pseudogene</th>
+    </tr>
+</table>
+<br>
+<p>BAK-1 (BCL2 Antagonist/Killer 1), on chromosome 6, produces a very similar protein product to the BAK-2 gene 
+</p>
+<img src="{% static 'img/BAK_index_05.png' %}">
+<img src="{% static 'img/BAK_index_06.png' %}">
+<br>
+<h4><u>BAK-2, on chromosome 20</u></h4>
+<p>Conserved SH3 domains of Bcl-2 on BAK-2</p>
+<img src="{% static 'img/BAK_index_07.png' %}">
+<img src="{% static 'img/BAK_index_08.png' %}">
+<p>Southern blot analysis of human DNA highlights a lack of introns in BAK-3, indicating that this gene on chromosome 11 is a processed pseudogene [3]. A second isoform of BAK-1 has been found in humans.
+</p>
+<br>
+<h4><u>Bak3</u></h4>
+<img src="{% static 'img/BAK_index_09.png' %}">
+<img src="{% static 'img/BAK_index_10.png' %}">
+<img src="{% static 'img/BAK_index_11.png' %}">
+<img src="{% static 'img/BAK_index_12.png' %}" style='width:92.5%; height:92.5%'>
+</div>
+</div>
+</div>
+{% endblock %}

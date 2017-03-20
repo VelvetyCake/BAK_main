@@ -1,0 +1,35 @@
+{% extends 'main_page/header.html' %}
+{% block content %}
+{% load staticfiles%}
+<h3>Introduction</h3>
+<div>
+    <p>
+        Bcl-2 antagonist/killer, referred to as BAK, is a member of the Bcl-2 protein family. Proteins from this family have a regulatory role in programmed cell death and are important contributors to mitochondrial pathophysiology. The family name is derived from B-cell lymphoma 2 where Bcl-2 proteins were found to direct the apoptosis of malignant cells. Bcl-2 proteins are characterised by four Bcl-2 homology domains, classifying the proteins into pro-survival members, pro-apoptotic BH3-only proteins, and multi-BH pro-apoptotic proteins. BAK falls into the latter category, containing four BH domains.
+    </p><p>
+        BAK was cloned in 1995, with three closely-related BAK genes found. BAK-1, on chromosome 6, produces a very similar protein product to the BAK-2 gene on chromosome 20. Southern blot analysis of human DNA highlights a lack of introns in BAK-3, indicating that this gene on chromosome 11 is a processed pseudogene. In addition, a second isoform of BAK-1 has been found in humans.
+    </p><p>
+        Northern blot analysis visualises mRNA expression of BAK, revealing it to be widespread in adult tissues, throughout the major organs. Within the cells of these tissues, BAK is predominantly localised in the outer mitochondrial membrane, anchored by its C-terminal transmembrane domain.
+     </p><p>
+        Cytotoxic stimuli trigger apoptosis of cells. Anti-cancer agents, DNA damage, or growth factor withdrawal, for example signal to pro-apoptotic proteins. Pro-apoptotic BH3-only proteins, including Bim and Bid, can indirectly activate BAK by inhibiting the action of Bcl-2-like proteins (Figure 1). Alternatively, activation of BAK is achieved by BH3-only proteins directly binding to the BAK. Interestingly, this is not the only pathway to induce mitochondrial permeabilization for apoptosis. Another member of the BCl-2 family, BAX can be translocated to the mitochondria to also facilitate the liberation of apoptogenic factors.
+    </p><p>
+        Activation of BAK results in substantial conformational changes that allow it to dimerize with neighbouring BAK proteins (Figure 1). In its activated form, BAK’s BH3 domain is transiently exposed. Subsequently, a BAK homodimer can form as BH3 domains from two activated BAK monomers lock into each other’s hydrophobic grooves. BAK dimers then crosslink via cysteine residues (C166) on the α6 helices of each monomer to form large, disordered oligomers acting as pores in the outer mitochondrial membrane. As a result, pro-apoptotic proteins such as cytochrome C, Smac/Diablo and endonucleases are released into the cytoplasm from the intermembrane space, and act to activate downstream caspase cascades ultimately leading to cell death.
+    </p>
+</div>
+<div class='container'>
+    <div class='row'>
+    <div class='col-xs-5'>
+        <img src = "{% static 'img/BAKactiv.png' %}" height =100% width = 100%>
+    </div>
+    <div class='col-xs-5'>
+        <p>
+            </br>
+            <b>Figure 1.</b> Model for BAK activation.
+            </br>
+            Under normal conditions, BAK is inhibited by Bcl-2-like proteins Mcl-1 and Bcl-xL. Pro-apoptotic BH3-only proteins (e.g. Bid) displace BAK from Bcl-xL, Noxa can displace BAK from Mcl-1 (Bcl-2 family). Free BAK can encounter other inhibiting proteins, or homodimerize. Oligomerization leads to pore formation on the outer mitochondrial membrane.
+            </br>
+            Adapted from <a href='http://genesdev.cshlp.org/content/19/11/1294' target='_blank'>Willis et al., 2005</a>
+        </p>
+    </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'main_page/header.html' %}
+{% block content %}
+{% load staticfiles %}
+<h3>Structural Models</h3>
+<h4>The Bcl-2 Core Fold</h4>
+<p>Activation of Bak induces important conformational changes, its structure in the inactive form has been solved by X-ray crystallography, however its structure when activated has not been confirmed yet. When inactive, Bak shares a common fold with other members of the Bcl-2 family: the Bcl-2 core fold. This can be described as a bundle of 8 amphipathic alpha-helices folded as shown in figure 1. Bak also displays a 9th hydrophobic alpha helix at its C-terminus which anchors it to the outer mitochondrial membrane, however the structure was solved in solution (for X-ray crystallography) and this helix is not shown in the 3d models.
+</p>
+<div class='container'>
+    <div class='row'>
+        <div class='col-xs-5'>
+            <img src="{% static 'img/Monomer domains.png' %}" style='height:97%; width:97%;'>
+        </div>
+        <div class='col-xs-5'>
+            <img src="{% static 'img/monomerspectrum.png' %}" style='height:70%; width:70%;'>
+        </div>
+    </div>
+</div>
+<p>The inactive human Bak structure <a href='http://www.rcsb.org/pdb/explore.do?structureId=2JCN' target='_blank'>PDB: 2JCN</a>. Alpha helices 2-5 form a donut shape with α5 at its core, this structure is capped by the short α8. The hydrophobic sides of α2-5 form a hydrophobic groove termed the BC groove as it has been shown to accommodate either BH3 domains or the C-terminal helix. The BC groove is delimited by the BH1, BH2 and BH3 domains respectively shown in orange, blue and red. The residue on the α6 helix in cyan is for cysteine 166 which binds to another Cys166 after the homodimer has been formed. This causes the oligomerisation of the BAK dimers that is necessary for pore formation. Note that the structure is a mutant protein at this site, the cysteine was replaced with serine.
+</p>
+<!--<div class='container'>
+    <div class='row'>
+        <div class='col-xs-4'>
+        </br>
+            <div id="appdiv"></div>
+        </div>
+        <div class='col-xs-6'>
+            <p>The inactive human Bak structure PDB: 2JCN. Alpha helices 2-5 form a donut shape with α5 at its core, this structure is capped by the short α8. The hydrophobic sides of α2-5 form a hydrophobic groove termed the BC groove as it has been shown to accommodate either BH3 domains or the C-terminal helix. The BC groove is delimited by the BH1, BH2 and BH3 domains respectively shown in orange, blue and red. The residue on the α6 helix in cyan is for cysteine 166 which binds to another Cys166 after the homodimer has been formed. This causes the oligomerisation of the BAK dimers that is necessary for pore formation. Note that the structure is a mutant protein at this site, the cysteine was replaced with serine.
+            </p>
+        </div>
+    </div>
+</div>-->
+<h4>BAK Activation</h4>
+<img src="{% static 'img/BAKbidBH3.png' %}" style='height:70%; width:70%;'>
+<p>BAK activation may occur through dislodgment of its BH3 domain from the grooves of Mcl-1 and BCLxL by the action of Noxa, Bad and other BH3 only proteins such as Bid. The latter can additionally directly activate BAK through interaction between its BH3 domain and BAK’s BC groove as shown here <a href='http://www.rcsb.org/pdb/explore.do?structureId=2m5b' target='_blank'>(PDB: 2M5B)</a> with a Bid isolated BH3 domain shown in red. Bid’s BH3 domain slightly opens the groove that is initially occluded by two residues at the end of BAK’s BH3: R88 and Y89 (in orange). There is extensive interaction between BH3 domains and the BC groove, for example BAK R127 and N124 form H-bonds with D95 and D98 from bid (numbers from a bid BH3 SAHBa from <a href='http://www.nature.com/nsmb/journal/v20/n5/full/nsmb.2563.html' target='_blank'>Moldoveanu et al., 2013</a>). For a precise description of the interaction consult the supplementary material of <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3683554/#SD1' target='_blank'>this</a> research publication. In addition, activation of BAK is highly dependent on de-phosphorylation of key residues S117(purple) and Y108(yellow), the mechanisms underlying this are however poorly understood.  
+</p>
+
+<h4>BAK Homodimers and BAX/BAK Heterodimers</h4>
+<p>BAK activation causes its BH3 domain to be temporarily exposed, if this does not re-enter in an interaction with inhibitory Mcl-1 and BclxL it can be reburied in BAK homodimers or BAK/BAX heterodimers via a BH3 in groove interaction. The BH3:in groove crystal structure was solved using truncated BAK monomers (helices 2-5) in interaction with GFP which has been hidden for clarity.
+</p>
+<img src="{% static 'img/Homodimer.png' %}" style='height:70%; width:70%;'>
+<p>The <a href='http://www.rcsb.org/pdb/explore.do?structureId=5KTG' target='_blank'>PDB file (5KTG)</a> was edited using pymol, the two Bak monomers have been coloured green and blue. The BH3 domains, coloured orange on one monomer, are inserted in the other monomer’s hydrophobic groove. Some important hydrophobic residues in the groove have been coloured red (on one monomer only for clarity), as seen in the multiple sequence assignment there are many more hydrophobic residues that are susceptible of helping to stabilize this interaction. More <a href=' http://www.nature.com/articles/srep30763' target='_blank'>information here</a>.
+</p>
+<!--
+<div class='container'>
+    <div class='row'>
+        <div class='col-xs-4'>
+            <div id='appdiv_2'></div>
+        </div>
+        <div class='col-xs-6'>
+            <p>
+                The PDB file (5KTG) was edited using pymol, the two Bak monomers have been coloured green and blue. The BH3 domains, coloured orange on one monomer, are inserted in the other monomer’s hydrophobic groove. Some important hydrophobic residues in the groove have been coloured red (on one monomer only for clarity), as seen in the multiple sequence assignment there are many more hydrophobic residues that are susceptible of helping to stabilize this interaction. More information <a href='http://www.nature.com/articles/srep30763'>here</a>.
+            </p>
+        </div>
+    </div>
+</div>
+-->
+
+<!--<script type = 'text/javascript'>
+    var Info = {
+        color: '#FFFFFF',
+        height: 300,
+        width: 300,
+        use: 'HTML5',
+        j2sPath: '{% static "js/j2s" %}',
+        src: '{% static "pdb/BAK_momomer_lables-final.pse" %}',
+        defaultModel: "",
+        addSelectionOptions: false,
+        disableInitialConsole: true,
+        debug: false
+    };
+    var Info2 = {
+        color: '#FFFFFF',
+        height: 300,
+        width: 300,
+        use: 'HTML5',
+        j2sPath: '{% static "js/j2s" %}',
+        src: '{% static "pdb/BAK homodimer.pse" %}',
+        defaultModel: "",
+        addSelectionOptions: false,
+        disableInitialConsole: true,
+        debug: false
+    };
+    $(document).ready(function(){
+        $('#appdiv').html(Jmol.getAppletHtml('myJmol', Info));
+        $('#appdiv_2').html(Jmol.getAppletHtml('myJmol', Info2));
+})
+</script>-->
+{% endblock %}
